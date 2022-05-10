@@ -1,5 +1,5 @@
 
-#neofix_sdt_search {
+#neofix_sdl_search {
   width: 100%;
   font-size: 16px;
   padding: 12px 30px;
@@ -7,7 +7,7 @@
   margin-bottom: 12px;
 }
 
-#neofix_sdt table {
+#neofix_sdl table {
     border: 1px solid #ccc;
     border-collapse: collapse;
     margin: 0;
@@ -16,36 +16,36 @@
     table-layout: fixed;
   }
 
-#neofix_sdt table tr {
+#neofix_sdl table tr {
     border: 1px solid #ddd;
     padding: .35em;
   }
   
-  #neofix_sdt table th,
-  #neofix_sdt table td {
+  #neofix_sdl table th,
+  #neofix_sdl table td {
     padding: .625em;
     text-align: center;
     vertical-align: top;
   }
-  #neofix_sdt table th {
+  #neofix_sdl table th {
     background-color: #4472C4;
     color: white;
     font-size: .95em;
     letter-spacing: .1em;
     text-transform: uppercase;
   }
-  #neofix_sdt .column_1{
+  #neofix_sdl .column_1{
 	  font-weight: bold;
 	  font-size: 0.9em;
   }
 
-  #neofix_sdt .column_2{
+  #neofix_sdl .column_2{
       font-size: 0.8em;
       text-align: left;
   }
 
 
-  #neofix_sdt .sdt_download {
+  #neofix_sdl .sdl_download {
     background-color: #4CAF50;
     border: none;
     border-radius: 4px;
@@ -58,21 +58,21 @@
     cursor: pointer;
   }
 
-  #neofix_sdt .column_3{
+  #neofix_sdl .column_3{
     text-align: right;
   }
 
   
   @media screen and (max-width: 600px) {
-    #neofix_sdt table {
+    #neofix_sdl table {
       border: 0;
     }
   
-    #neofix_sdt table caption {
+    #neofix_sdl table caption {
       font-size: 1.3em;
     }
     
-    #neofix_sdt table thead {
+    #neofix_sdl table thead {
       border: none;
       clip: rect(0 0 0 0);
       height: 1px;
@@ -83,29 +83,29 @@
       width: 1px;
     }
     
-    #neofix_sdt table tr {
+    #neofix_sdl table tr {
       border-bottom: 3px solid #ddd;
       display: block;
       margin-bottom: .625em;
     }
     
-    #neofix_sdt table td {
+    #neofix_sdl table td {
       border-bottom: 1px solid #ddd;
       display: block;
       font-size: .8em;
       text-align: right;
     }
-	#neofix_sdt .column_2{
+	#neofix_sdl .column_2{
       	text-align: right;
 	}
 	
-	  #neofix_sdt .column_2::before{
+	  #neofix_sdl .column_2::before{
 		display: block;
 		float: none;
       	text-align: left;
   	}
     
-    #neofix_sdt table td::before {
+    #neofix_sdl table td::before {
       /*
       * aria-label has no advantage, it won't be read inside a table
       content: attr(aria-label);
@@ -116,7 +116,7 @@
       text-transform: uppercase;
     }
     
-    #neofix_sdt table td:last-child {
+    #neofix_sdl table td:last-child {
       border-bottom: 0;
     }
   }

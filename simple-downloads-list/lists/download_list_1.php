@@ -26,7 +26,7 @@
 		
 		require_once __DIR__ . "/../connection.php";
 		
-		wp_enqueue_style( 'neofix_sdt_style_1', plugins_url( '../style/style_1.css' , __FILE__ ));
+		wp_enqueue_style( 'neofix_sdl_style_1', plugins_url( '../style/style_1.css' , __FILE__ ));
 		global $wpdb;
 
 
@@ -39,9 +39,9 @@
 		}
 		
 		echo  '
-			<div id="neofix_sdt">
-			<input type="text" id="neofix_sdt_search" onkeyup="myFunction()" placeholder="'.$search_label.'">
-			<table id="neofix_sdt_table">
+			<div id="neofix_sdl">
+			<input type="text" id="neofix_sdl_search" onkeyup="myFunction()" placeholder="'.$search_label.'">
+			<table id="neofix_sdl_table">
 				<thead>
 				  <tr>
 					<th scope="col">'.$name_label.'</th>
@@ -56,7 +56,7 @@
 				<tr>
 				<td class="column_1" data-label="'.$name_label.'">'.(empty($row->name) ? '&nbsp;' : $row->name).'</td>
 				<td class="column_2" data-label="'.$description_label.'">'.(empty($row->description) ? '&nbsp;' : $row->description).'</td>
-				<td class="column_3"><a class="sdt_download" href="'.(empty($row->download) ? '#' : $row->download).'">Download</button></td>
+				<td class="column_3"><a class="sdl_download" href="'.(empty($row->download) ? '#' : $row->download).'">Download</button></td>
 				</tr>
 				';
 		}
@@ -69,9 +69,9 @@
 		function myFunction() {
 		  // Declare variables
 		  var input, filter, table, tr, td, i, txtValue;
-		  input = document.getElementById("neofix_sdt_search");
+		  input = document.getElementById("neofix_sdl_search");
 		  filter = input.value.toUpperCase();
-		  table = document.getElementById("neofix_sdt_table");
+		  table = document.getElementById("neofix_sdl_table");
 		  tr = table.getElementsByTagName("tr");
 
 		  // Loop through all table rows, and hide those who dont match the search query
