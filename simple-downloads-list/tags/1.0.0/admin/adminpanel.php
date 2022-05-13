@@ -1,19 +1,24 @@
 <?php
 	function render_admin_panel(){
-		wp_enqueue_script( 'fff', plugins_url( 'jquery.tabledit.min.js' , __FILE__ ), array("jquery"));
-		wp_enqueue_script( 'gg_loader', plugins_url( 'sdl.js' , __FILE__ ), array("jquery"));
-		wp_localize_script('gg_loader', 'neofix_sdl_folder', array('pluginsUrl' => plugins_url()."/simple-downloads-list"));
+		// enqueue scripts
+		wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js');
+		wp_enqueue_script( 'neofix_sdl_tabledit', plugins_url('jquery.tabledit.min.js', __FILE__), array('jquery', 'bootstrap'));
+		wp_enqueue_script( 'neofix_sdl_admin', plugins_url('sdl.js', __FILE__), array('jquery', 'neofix_sdl_tabledit'));
+		
+		// enqueue styles
+		wp_enqueue_style( 'font_awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+		wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css', array('font_awesome'));
+		
+		// localize api url
+		wp_localize_script('neofix_sdl_admin', 'neofix_sdl_folder', array('pluginsUrl' => plugins_url()."/simple-downloads-list"));
+
+		
+		
 
 		require_once __DIR__ . "/../connection.php";
 		$result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FALSE ORDER BY id DESC");
 
  		echo '
-			<head>  
-				<title>Live Table Data Edit Delete using Tabledit Plugin in PHP</title>  
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-			</head>  
 		<body>
 			<div style="padding: 20px;">
 				<h1 style="text-align:center;">Simple downloads list</h1>

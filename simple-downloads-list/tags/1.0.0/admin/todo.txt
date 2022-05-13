@@ -3,8 +3,8 @@
 // TODO: ## Calling files remotely 
 // TODO: ## Calling core loading files directly
 --// TODO: ## Variables and options must be escaped when echo'd
-// TODO: ## Please use wp_enqueue commands 
-// TODO: ## Out of Date Libraries
+--// TODO: ## Please use wp_enqueue commands 
+--// TODO: ## Out of Date Libraries
 // TODO: ## Generic function/class/define/namespace names 
 
 
