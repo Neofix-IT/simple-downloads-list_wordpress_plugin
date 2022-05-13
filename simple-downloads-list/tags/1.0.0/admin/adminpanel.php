@@ -1,14 +1,14 @@
 <?php
 	function render_admin_panel(){
 		// enqueue scripts
-		wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js');
+		wp_enqueue_script( 'bootstrap', plugins_url('../includes/bootstrap-4.6.1-dist/js/bootstrap.min.js', __FILE__));
 		wp_enqueue_script( 'neofix_sdl_tabledit', plugins_url('jquery.tabledit.min.js', __FILE__), array('jquery', 'bootstrap'));
 		wp_enqueue_script( 'neofix_sdl_admin', plugins_url('sdl.js', __FILE__), array('jquery', 'neofix_sdl_tabledit'));
 		
 		// enqueue styles
-		wp_enqueue_style( 'font_awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
-		wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css', array('font_awesome'));
-		
+		wp_enqueue_style( 'font_awesome', plugins_url('../includes/fontawesome-6.1.1-web/css/all.min.css', __FILE__));
+		wp_enqueue_style( 'bootstrap', plugins_url('../includes/bootstrap-4.6.1-dist/css/bootstrap.min.css', __FILE__));
+
 		// localize api url
 		wp_localize_script('neofix_sdl_admin', 'neofix_sdl_folder', array('pluginsUrl' => plugins_url()."/simple-downloads-list"));
 
