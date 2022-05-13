@@ -44,8 +44,8 @@
 			<table id="neofix_sdl_table">
 				<thead>
 				  <tr>
-					<th scope="col">'.$name_label.'</th>
-					<th scope="col">'.$description_label.'</th>
+					<th scope="col">'.esc_html($name_label).'</th>
+					<th scope="col">'.esc_html($description_label).'</th>
 					<th scope="col"></th>
 				  </tr>
 				</thead>
@@ -54,9 +54,9 @@
 		foreach($result as $row){
 			echo '
 				<tr>
-				<td class="column_1" data-label="'.$name_label.'">'.(empty($row->name) ? '&nbsp;' : $row->name).'</td>
-				<td class="column_2" data-label="'.$description_label.'">'.(empty($row->description) ? '&nbsp;' : $row->description).'</td>
-				<td class="column_3"><a class="sdl_download" href="'.(empty($row->download) ? '#' : $row->download).'">Download</button></td>
+				<td class="column_1" data-label="'.esc_html($name_label).'">'.(empty($row->name) ? '&nbsp;' : esc_html($row->name)).'</td>
+				<td class="column_2" data-label="'.esc_html($description_label).'">'.(empty($row->description) ? '&nbsp;' : esc_html($row->description)).'</td>
+				<td class="column_3"><a class="sdl_download" href="'.(empty($row->download) ? '#' : esc_html($row->download)).'">Download</button></td>
 				</tr>
 				';
 		}

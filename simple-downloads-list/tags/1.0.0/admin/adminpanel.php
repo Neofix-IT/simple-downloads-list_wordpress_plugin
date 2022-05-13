@@ -46,11 +46,11 @@
 		foreach($result as $row){
 			echo '
 			<tr>
-			<td>'.$row->id.'</td>
-			<td>'.$row->name.'</td>
-			<td>'.$row->description.'</td>
-			<td>'.$row->category.'</td>
-			<td>'.$row->download.'</td>
+			<td>'.esc_html($row->id).'</td>
+			<td>'.esc_html($row->name).'</td>
+			<td>'.esc_html($row->description).'</td>
+			<td>'.esc_html($row->category).'</td>
+			<td>'.esc_html($row->download).'</td>
 			</tr>
 			';
 		}
