@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Simple downloads list
+ * Plugin Name: Simple Downloads List
  * Plugin URI: http://www.neofix.ch/
  * Description: Create a downloads list - quick and easy.
  * Version: 1.0.0
