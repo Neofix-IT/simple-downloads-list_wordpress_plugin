@@ -2,7 +2,7 @@
 
 require_once "adminpanel_backend.php";
 
-function render_admin_panel(){
+function neofix_sdl_render_admin_panel(){
 	// enqueue styles
 	wp_enqueue_style( 'font_awesome', plugins_url('../includes/fontawesome-6.1.1-web/css/all.min.css', __FILE__));
 	wp_enqueue_style( 'bootstrap', plugins_url('../includes/bootstrap-4.6.1-dist/css/bootstrap.min.css', __FILE__));
@@ -28,13 +28,13 @@ function render_admin_panel(){
 			<h1 style="text-align:center;">Simple downloads list</h1>
 					<div style="padding: 20px;margin: 0px 50px; text-align: center; background-color: #DCDCDC;">
 		<p style="font-size: 20px;">How to use</p>
-		<b>Simply add shortcode: [neofix_sdl category="category_name" language="language"]</b><br><br>
-		<b>category:</b> Name of the category to filter<br>
-		<b>language:</b> Language of the plugin. Currently available: "en" and "de"
+		<p><b>Simply add shortcode:<br>[neofix_sdl category="category_name" language="language"]</b></p>
+		<p><b>category:</b> Name of the category to filter<br>
+		<b>language:</b> Language of the plugin. Currently available: "en" and "de"</p>
 	</div>
 			<div class="row" style="padding: 20px;">
 				<div class="col-md-12 m-b-20">
-				<input type="button" value="Add row" id="addRow10" class="btn btn-info pull-right">
+				<input type="button" value="Add download" id="addRow10" class="btn btn-info pull-right" style="float: right">
 				</div>
 			</div>
 			<div class="row">
