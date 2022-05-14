@@ -1,6 +1,7 @@
 === Simple Downloads List ===
 Contributors: neofix
-Tags: download, list, simple, downloads, table, files
+Donate link: https://neofix.ch
+Tags: download, list, simple, downloads, table, files, attachments
 Requires at least: 4.7
 Tested up to: 5.9
 Requires PHP: 7.0
@@ -8,43 +9,41 @@ Stable tag: 1.0.0
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
-Create a quick and easy downloads list - quick and easy. With categories and mobile friendly design.
+Create a downloads list - quick and easy. With categories and mobile friendly design
 
 == Description ==
-== What is Simple downloads list? ==
 
-Create a quick and easy downloads list - quick and easy. With categories and mobile friendly design.
+Simple Downloads List allows you to provide multiple downloads for your users. Simply add your downloads in the admin section and insert your shortcode.
 
-== How to set up ==
+= Main features: =
 
-Download and install \"Simple downloads list\" from Wordpress plugins. Add Downloads inside of the admin menu. For the front-end, use this code:
+* Fully free - there's no pro version
+* Mobile friendly designed download lists
+* Allows user to search your downloads with a search bar
+* Show only certain downloads per list by filtering then via categories
+* Multilingual lists: "en" and "de" languages supported
 
-= Shortcode: =
+= How to use =
 
-> [neofix_sdl category=\"category_name\" language=\"language\"]
+Simply add this shortcode:
 
-== Available shortcode extensions: ==
+`[neofix_sdl language="en" category="category_name"]`
 
- - Language (switch frontend language) - default = \"en\"
-	 - en
-	 - de
- - Category name (filter categories)  - default = all categories
+language: Frontend language -> currently "en" (english) and "de" (german) are supported
+category: Which categories should be displayed? If this option is missing, all downloads are visible
 
 == Installation ==
-== How to set up ==
 
 Download and install \"Simple downloads list\" from Wordpress plugins. Add Downloads inside of the admin menu. For the front-end, use this code:
 
-= Shortcode: =
+= How to use =
 
-> [neofix_sdl category=\"category_name\" language=\"language\"]
+Simply add this shortcode:
 
-== Available shortcode extensions: ==
+`[neofix_sdl language="en" category="category_name"]`
 
- - Language (switch frontend language) - default = \"en\"
-	 - en
-	 - de
- - Category name (filter categories)  - default = all categories
+language: Frontend language -> currently "en" (english) and "de" (german) are supported
+category: Which categories should be displayed? If this option is missing, all downloads are visible
 
 == Screenshots ==
 1. Frontend desktop
@@ -52,6 +51,7 @@ Download and install \"Simple downloads list\" from Wordpress plugins. Add Downl
 3. Admin panel
 
 == Changelog ==
+
 = v 1.0.0 =
 
 Release
