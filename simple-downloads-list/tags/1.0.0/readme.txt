@@ -13,13 +13,13 @@ Create a downloads list - quick and easy. With categories and mobile friendly de
 
 == Description ==
 
-Simple Downloads List allows you to provide multiple downloads for your users. Simply add your downloads in the admin section and insert your shortcode.
+Simple Downloads List allows you to provide multiple downloads as a beautiful list for your visitors. Simply add your downloads in the admin section and insert the shortcode.
 
 = Main features: =
 
 * Fully free - there's no pro version
-* Mobile friendly designed download lists
-* Allows user to search your downloads with a search bar
+* Mobile friendly list design
+* A search bar allows your visitors to search for downloads
 * Show only certain downloads per list by filtering then via categories
 * Multilingual lists: "en" and "de" languages supported
 
