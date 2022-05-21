@@ -28,9 +28,9 @@ add_action('wp_ajax_neofix_sdl_edit', 'neofix_sdl_admin_backend_edit');
 function neofix_sdl_admin_backend_edit(){
 
     // sanitize input
-    $id = $_POST['id'];
-    if(!$id || (int)$id <= 0){
-        // wp_send_json_error('ID is not valid');
+    $id = intval($_POST['id']);
+    if(!$id || $id <= 0){
+        wp_send_json_error('ID is not valid');
     }
     else{
         $data = array(  'name' => sanitize_text_field( $_POST['name'] ),
@@ -55,9 +55,9 @@ function neofix_sdl_admin_backend_edit(){
 add_action('wp_ajax_neofix_sdl_delete', 'neofix_sdl_admin_backend_delete');
 function neofix_sdl_admin_backend_delete(){
     // sanitize input
-    $id = $_POST['id'];
-    if(!$id || (int)$id <= 0){
-        // wp_send_json_error('ID is not valid');
+    $id = intval($_POST['id']);
+    if(!$id || $id <= 0){
+        wp_send_json_error('ID is not valid');
     }
     else{
         $data = array(  'deleted' => 1);
@@ -79,9 +79,9 @@ function neofix_sdl_admin_backend_delete(){
 add_action('wp_ajax_neofix_sdl_restore', 'neofix_sdl_admin_backend_restore');
 function neofix_sdl_admin_backend_restore(){
     // sanitize input
-    $id = $_POST['id'];
-    if(!$id || (int)$id <= 0){
-        // wp_send_json_error('ID is not valid');
+    $id = intval($_POST['id']);
+    if(!$id || $id <= 0){
+        wp_send_json_error('ID is not valid');
     }
     else{
         $data = array(  'deleted' => 0);
