@@ -86,11 +86,4 @@ function neofix_sdl_render_list_1($attr){
 		';
 	return $data;
 }
-
-function startsWith ($string, $startString)
-{
-	$len = strlen($startString);
-	return (substr($string, 0, $len) === $startString);
-}
-
 ?>
