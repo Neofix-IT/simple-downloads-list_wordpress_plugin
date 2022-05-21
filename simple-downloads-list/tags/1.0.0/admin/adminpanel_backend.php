@@ -12,15 +12,15 @@ function neofix_sdl_admin_backend_add(){
     foreach($result as $row){
         $data .= '
         <tr>
-        <td>'.esc_html($row->id).'</td>
-        <td>'.esc_html($row->name).'</td>
-        <td>'.esc_html($row->description).'</td>
-        <td>'.esc_html($row->category).'</td>
-        <td>'.esc_html($row->download).'</td>
+        <td>'.$row->id.'</td>
+        <td>'.$row->name.'</td>
+        <td>'.$row->description.'</td>
+        <td>'.$row->category.'</td>
+        <td>'.$row->download.'</td>
         </tr>
         ';
     }
-    echo $data;
+    echo esc_html($data);
     wp_die();
 }
 
