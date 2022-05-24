@@ -6,8 +6,9 @@
   </tr>
 </table>
 
+[![Visit on Wordpress](https://img.shields.io/badge/Visit_on_Wordpress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white)](https://wordpress.org/plugins/simple-downloads-list/)
 [![Website](https://img.shields.io/badge/Web-neofix.ch-brightgreen?style=for-the-badge)](https://neofix.ch)
-[![GitHub](https://img.shields.io/github/license/Neofix-IT/simple-downloads-list_wordpress_plugin?style=for-the-badge&color=blue)](LICENSE)
+[![GitHub](https://img.shields.io/github/license/Neofix-IT/simple-downloads-list_wordpress_plugin?style=for-the-badge&color=red)](LICENSE)
 
 ## What is Simple downloads list?
 
@@ -31,5 +32,19 @@ Simply add this shortcode:
 
 **category:** Which categories should be displayed? If this option is missing, all downloads are visible
 
+## Screenshots
 
+<p align="center">Frontend desktop</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/65506676/170063082-10465497-bfda-401d-bff0-43eda5858127.png">
+</p>
 
+<p align="center">Frontend mobile</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/65506676/170063704-e0057132-393d-4ce8-b2f7-03d2be09333b.png">
+</p>
+
+<p align="center">Admin-panel</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/65506676/170064248-dfbf178e-f872-4541-aca9-8991a9c25d6c.png">
+</p>
