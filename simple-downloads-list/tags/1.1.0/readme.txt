@@ -52,6 +52,10 @@ category: Which categories should be displayed? If this option is missing, all d
 
 == Changelog ==
 
+= v 1.1.0 =
+
+Tested with Wordpress 6.0 and minor optimisations.
+
 = v 1.0.0 =
 
 Release
