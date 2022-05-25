@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Simple Downloads List
- * Plugin URI: http://www.neofix.ch/
+ * Plugin URI: http://neofix.ch/
  * Description: Create a downloads list - quick and easy.
  * Version: 1.1.0
  * Author: Martin Heini
- * Author URI: http://www.neofix.ch
+ * Author URI: http://neofix.ch
  */
 
 require_once "admin/adminpanel.php";
@@ -34,7 +34,7 @@ function neofix_sdl_admin_notice_show(){
     if( get_transient( 'neofix_sdl_admin_notice' ) ){
         ?>
         <div class="updated notice is-dismissible">
-            <p>Thank you for using this plugin! <strong>You are awesome</strong>.</p>
+            <p>Thank you for using Simple Downloads List! <strong>You are awesome</strong>.</p>
         </div>
         <?php
         /* Delete transient, only display this notice once. */
