@@ -3,9 +3,9 @@ Contributors: neofix
 Donate link: https://neofix.ch
 Tags: download, list, simple, downloads, table, files, attachments
 Requires at least: 4.7
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
