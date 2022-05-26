@@ -49,7 +49,7 @@ function neofix_sdl_render_list_1($attr){
 		$data .= '
 			<tr>
 			<td class="column_1" data-label="'.esc_html($name_label).'">'.(empty($row->name) ? '&nbsp;' : esc_html($row->name)).'</td>
-			<td class="column_2" data-label="'.esc_html($description_label).'">'.(empty($row->description) ? '&nbsp;' : esc_html($row->description)).'</td>
+			<td class="column_2" data-label="'.esc_html($description_label).'">'.(empty($row->description) ? '&nbsp;' : nl2br(esc_html($row->description))).'</td>
 			<td class="column_3"><a class="sdl_download" href="'.(empty($row->download) ? '#' : esc_html($row->download)).'">Download</button></td>
 			</tr>
 			';
