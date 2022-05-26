@@ -19,7 +19,7 @@ Simple Downloads List allows you to provide multiple downloads as a beautiful li
 * Fully free - there's no pro version
 * Mobile friendly list design
 * A search bar allows your visitors to search for downloads
-* Show only certain downloads per list by filtering then via categories
+* Show only certain downloads per list by filtering them via categories
 * Multilingual lists: "en" and "de" languages supported
 
 ### How to use
