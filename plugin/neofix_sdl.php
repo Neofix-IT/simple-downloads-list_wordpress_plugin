@@ -3,8 +3,8 @@
  * Plugin Name: Simple Downloads List
  * Plugin URI: http://neofix.ch/
  * Description: Create a downloads list - quick and easy.
- * Version: 1.1.0
- * Author: Martin Heini
+ * Version: 1.1.1
+ * Author: Neofix
  * Author URI: http://neofix.ch
  */
 
