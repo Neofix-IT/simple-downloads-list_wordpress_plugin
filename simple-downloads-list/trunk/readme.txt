@@ -5,7 +5,7 @@ Tags: download, list, simple, downloads, table, files, attachments
 Requires at least: 4.7
 Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
@@ -20,7 +20,7 @@ Simple Downloads List allows you to provide multiple downloads as a beautiful li
 * Fully free - there's no pro version
 * Mobile friendly list design
 * A search bar allows your visitors to search for downloads
-* Show only certain downloads per list by filtering then via categories
+* Show only certain downloads per list by filtering them via categories
 * Multilingual lists: "en" and "de" languages supported
 
 = How to use =
@@ -51,6 +51,11 @@ category: Which categories should be displayed? If this option is missing, all d
 3. Admin panel
 
 == Changelog ==
+
+= v 1.1.1 =
+
+Fix: Line breaks now working for the frontend.
+Small typo fixed within readme.txt
 
 = v 1.1.0 =
 
