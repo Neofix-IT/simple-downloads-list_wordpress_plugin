@@ -5,7 +5,7 @@ Tags: download, list, simple, downloads, table, files, attachments
 Requires at least: 4.7
 Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
@@ -27,23 +27,25 @@ Simple Downloads List allows you to provide multiple downloads as a beautiful li
 
 Simply add this shortcode:
 
-`[neofix_sdl language="en" category="category_name"]`
+`[neofix_sdl]`
 
-language: Frontend language -> currently "en" (english) and "de" (german) are supported
-category: Which categories should be displayed? If this option is missing, all downloads are visible
+= Additional properties =
+
+**language:** Frontend language -> currently "en" (english) and "de" (german) are supported
+**category:** Which categories should be displayed? If this option is missing, all downloads are visible
 
 == Installation ==
 
-Download and install \"Simple downloads list\" from Wordpress plugins. Add Downloads inside of the admin menu. For the front-end, use this code:
-
-= How to use =
+Download and install "Simple Downloads List" from Wordpress plugins. Add your downloads inside of the admin menu. Finally, add the shortcode within your page.
 
 Simply add this shortcode:
 
-`[neofix_sdl language="en" category="category_name"]`
+`[neofix_sdl]`
 
-language: Frontend language -> currently "en" (english) and "de" (german) are supported
-category: Which categories should be displayed? If this option is missing, all downloads are visible
+= Additional properties =
+
+**language:** Frontend language -> currently "en" (english) and "de" (german) are supported
+**category:** Which categories should be displayed? If this option is missing, all downloads are visible
 
 == Screenshots ==
 1. Frontend desktop
@@ -51,6 +53,12 @@ category: Which categories should be displayed? If this option is missing, all d
 3. Admin panel
 
 == Changelog ==
+
+= v 1.2.0 =
+
+New: Select files and content by using the wordpress file dialog.
+New: Preventing file opening via browser after a click on download -> preferring a download instead.
+Improved description for admin panel and readme.txt
 
 = v 1.1.1 =
 
