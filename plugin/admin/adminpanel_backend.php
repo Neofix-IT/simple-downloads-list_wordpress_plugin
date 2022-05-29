@@ -97,4 +97,15 @@ function neofix_sdl_admin_backend_restore(){
     wp_die();
 }
 
+// Ajax action to retrieve the file url
+add_action( 'wp_ajax_neofix_sdl_get_file_url', 'neofix_sdl_get_file_url'   );
+function neofix_sdl_get_file_url() {
+    if(isset($_GET['id']) ){
+		$parsed = wp_get_attachment_url( filter_input( INPUT_GET, 'id', FILTER_VALIDATE_INT ) );
+        wp_send_json_success( $parsed );
+    } else {
+        wp_send_json_error();
+    }
+}
+
 ?>
