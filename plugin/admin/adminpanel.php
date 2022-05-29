@@ -30,12 +30,13 @@ function neofix_sdl_render_admin_panel(){
 	<body>
 		<div style="padding: 20px;">
 			<h1 style="text-align:center;">Simple downloads list</h1>
-					<div style="padding: 20px;margin: 0px 50px; text-align: center; background-color: #DCDCDC;">
-		<p style="font-size: 20px;">How to use</p>
-		<p><b>Simply add shortcode:<br>[neofix_sdl category="category_name" language="language"]</b></p>
-		<p><b>category:</b> Name of the category to filter<br>
-		<b>language:</b> Language of the plugin. Currently available: "en" and "de"</p>
-	</div>
+			<div style="box-shadow: 1px 1px 3px; padding: 10px; border-radius: 5px; text-align: center; background-color: #DCDCDC;">
+				<p style="font-size: 15px;"><b>How to use the Shortcode:</b></p>
+				<p style="font-size: 15px; display: inline-block; padding: 5px 10px; background-color: #959595"><b>[neofix_sdl]</b></p>
+				<p><b>Additional properties</b><br/>
+				<b>category:</b> Name of the category to filter<br>
+				<b>language:</b> Language of the plugin. Currently available: "en" and "de"</p>
+			</div>
 			<div class="row" style="padding: 20px;">
 				<div class="col-md-12 m-b-20">
 				<input type="button" value="Add download" id="addRow10" class="btn btn-info pull-right" style="float: right">
