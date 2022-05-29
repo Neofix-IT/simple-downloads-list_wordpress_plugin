@@ -3,6 +3,10 @@
 require_once "adminpanel_backend.php";
 
 function neofix_sdl_render_admin_panel(){
+	// enqueue scripts for media selection
+	wp_enqueue_media();
+    wp_enqueue_script( 'neofix_sdl_media_selection', plugins_url( '/media_selection.js' , __FILE__ ), array('jquery'), '0.1' );
+
 	// enqueue styles
 	wp_enqueue_style( 'font_awesome', plugins_url('../includes/fontawesome-6.1.1-web/css/all.min.css', __FILE__));
 	wp_enqueue_style( 'bootstrap', plugins_url('../includes/bootstrap-4.6.1-dist/css/bootstrap.min.css', __FILE__));
@@ -59,7 +63,7 @@ function neofix_sdl_render_admin_panel(){
 		<td>'.esc_html($row->name).'</td>
 		<td>'.esc_html($row->description).'</td>
 		<td>'.esc_html($row->category).'</td>
-		<td>'.esc_html($row->download).'</td>
+		<td class="sdl_upload">'.esc_html($row->download).'</td>
 		</tr>
 		';
 	}
