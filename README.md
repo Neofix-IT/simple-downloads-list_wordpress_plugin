@@ -26,7 +26,9 @@ Simple Downloads List allows you to provide multiple downloads as a beautiful li
 
 Simply add this shortcode:
 
-`[neofix_sdl language="en" category="category_name"]`
+`[neofix_sdl]`
+
+### Additional properties
 
 **language:** Frontend language -> currently "en" (english) and "de" (german) are supported
 
