@@ -57,11 +57,11 @@ jQuery(document).ready(function(){
       data: data,
       dataType: 'html',
       success: function (data) {
-  
         // Add 'html' data to table
         jQuery('#example10 tbody').html(data);
-
         setupTableEdit();
+        // Set event listener again
+        jQuery(".sdl_upload").on("click", "input.tabledit-input.form-control.input-sm", function (e) {sdl_select_file(e, jQuery(this))});
       },
       error: function () {
         console.log(data);
