@@ -5,7 +5,7 @@ Tags: download, list, simple, downloads, table, files, attachments
 Requires at least: 4.7
 Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
@@ -53,6 +53,10 @@ Simply add this shortcode:
 3. Admin panel
 
 == Changelog ==
+
+= v 1.2.1 =
+
+Bugfix: After adding a row, the wordpress file dialog wasn't working -> Fixed.
 
 = v 1.2.0 =
 
