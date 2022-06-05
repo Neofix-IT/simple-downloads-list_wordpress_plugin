@@ -15,7 +15,7 @@ function neofix_sdl_admin_backend_add(){
         <td>'.esc_html($row->name).'</td>
         <td>'.esc_html($row->description).'</td>
         <td>'.esc_html($row->category).'</td>
-        <td>'.esc_html($row->download).'</td>
+        <td class="sdl_upload">'.esc_html($row->download).'</td>
         </tr>
         ';
     }
