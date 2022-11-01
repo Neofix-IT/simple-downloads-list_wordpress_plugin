@@ -41,6 +41,13 @@ function neofix_sdl_render_list_1($attr){
 			</tr>
 			';
 	}
+	if( count($result) == 0 ){
+		$data .= '
+			<tr>
+			<td colspan="3" class="no-data" style="text-align: center;"><p>'.__('No downloads available', 'simple-downloads-list').'</p></td>
+			</tr>
+			';
+	}
 	$data .= '
 			</tbody>
 			</table>
