@@ -20,7 +20,6 @@ Simple Downloads List allows you to provide multiple downloads as a beautiful li
 * Mobile friendly list design
 * A search bar allows your visitors to search for downloads
 * Show only certain downloads per list by filtering them via categories
-* Multilingual lists: "en" and "de" languages supported
 
 ### How to use
 
@@ -29,8 +28,6 @@ Simply add this shortcode:
 `[neofix_sdl]`
 
 ### Additional properties
-
-**language:** Frontend language -> currently "en" (english) and "de" (german) are supported
 
 **category:** Which categories should be displayed? If this option is missing, all downloads are visible
 
