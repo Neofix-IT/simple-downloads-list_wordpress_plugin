@@ -35,7 +35,6 @@ function neofix_sdl_render_admin_panel(){
 				<p style="font-size: 15px; display: inline-block; padding: 5px 10px; background-color: #959595"><b>[neofix_sdl]</b></p>
 				<p><b>Additional properties</b><br/>
 				<b>category:</b> Name of the category to filter<br>
-				<b>language:</b> Language of the plugin. Currently available: "en" and "de"</p>
 			</div>
 			<div class="row" style="padding: 20px;">
 				<div class="col-md-12 m-b-20">
