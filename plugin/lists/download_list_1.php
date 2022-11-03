@@ -5,22 +5,9 @@ function neofix_sdl_render_list_1($attr){
 	$table_name = $wpdb->prefix . 'neofix_sdl';
 
 	$args = shortcode_atts( array(
-		'language' => 'en',
 		'category' => ''
 	), $attr );
-	
-	$name_label;
-	$description_label;
-	$search_label;
-	if( $args["language"] == "de" ){
-		$name_label = "Name";
-		$description_label = "Beschreibung";
-		$search_label = "🔎︎  Suchen...";
-	} else {
-		$name_label = "Name";
-		$description_label = "Description";
-		$search_label = "🔎︎  Search...";
-	}
+
 	
 	wp_enqueue_style( 'neofix_sdl_style_1', plugins_url( '../style/style_1.css' , __FILE__ ));
 
@@ -34,12 +21,12 @@ function neofix_sdl_render_list_1($attr){
 	
 	$data = '
 		<div id="neofix_sdl">
-		<input type="text" id="neofix_sdl_search" onkeyup="myFunction()" placeholder="'.$search_label.'">
+		<input type="text" id="neofix_sdl_search" onkeyup="myFunction()" placeholder="'.__('Search...', 'simple-downloads-list').'">
 		<table id="neofix_sdl_table">
 			<thead>
 				<tr>
-				<th scope="col">'.esc_html($name_label).'</th>
-				<th scope="col">'.esc_html($description_label).'</th>
+				<th scope="col">'.__('Name', 'simple-downloads-list').'</th>
+				<th scope="col">'.__('Description', 'simple-downloads-list').'</th>
 				<th scope="col"></th>
 				</tr>
 			</thead>
@@ -48,9 +35,16 @@ function neofix_sdl_render_list_1($attr){
 	foreach($result as $row){
 		$data .= '
 			<tr>
-			<td class="column_1" data-label="'.esc_html($name_label).'">'.(empty($row->name) ? '&nbsp;' : esc_html($row->name)).'</td>
-			<td class="column_2" data-label="'.esc_html($description_label).'">'.(empty($row->description) ? '&nbsp;' : nl2br(esc_html($row->description))).'</td>
+			<td class="column_1" data-label="'.__('Name', 'simple-downloads-list').'">'.(empty($row->name) ? '&nbsp;' : esc_html($row->name)).'</td>
+			<td class="column_2" data-label="'.__('Description', 'simple-downloads-list').'">'.(empty($row->description) ? '&nbsp;' : nl2br(esc_html($row->description))).'</td>
 			<td class="column_3"><a class="sdl_download" href="'.(empty($row->download) ? '#' : esc_html($row->download)).'" download>Download</button></td>
+			</tr>
+			';
+	}
+	if( count($result) == 0 ){
+		$data .= '
+			<tr>
+			<td colspan="3" class="no-data" style="text-align: center;"><p>'.__('No downloads available', 'simple-downloads-list').'</p></td>
 			</tr>
 			';
 	}

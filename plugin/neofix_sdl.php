@@ -3,12 +3,21 @@
  * Plugin Name: Simple Downloads List
  * Plugin URI: http://neofix.ch/
  * Description: Create a downloads list - quick and easy.
- * Version: 1.2.1
+ * Version: 1.3.0
  * Author: Neofix
  * Author URI: http://neofix.ch
+ * Text Domain: simple-downloads-list
  */
 
 require_once "admin/adminpanel.php";
+
+add_action('plugins_loaded', 'neofix_sdl_plugin_init'); 
+
+function neofix_sdl_plugin_init() {
+
+    load_plugin_textdomain( 'simple-downloads-list', false, dirname(plugin_basename(__FILE__)).'/languages/' );
+
+}
 
 //
 // Admin section
