@@ -51,9 +51,10 @@ Simply add this shortcode:
 
 == Changelog ==
 
-= v 1.2.2 =
+= v 1.3.0 =
 
 Added default WordPress translations
+Added placeholder if there are no downloads available
 
 = v 1.2.1 =
 
