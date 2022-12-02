@@ -10,10 +10,15 @@ class NeofixSdlAdminpanel{
     }
 
     function render_adminpanel(){
-        
+        require_once "render_adminpanel.php";
+    }
+    
     }
 }
 
 
+}
+
+new NeofixSdlAdminpanel();
 
 ?>
