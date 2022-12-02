@@ -51,6 +51,10 @@ Simply add this shortcode:
 
 == Changelog ==
 
+= v 1.4.0 =
+
+Refactoring code
+
 = v 1.3.0 =
 
 Added default WordPress translations
