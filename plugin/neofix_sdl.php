@@ -9,6 +9,9 @@
  * Text Domain: simple-downloads-list
  */
 
+define( 'NEOFIX_SDL_PATH', plugin_dir_url( __FILE__ ) );
+define( 'NEOFIX_SDL_PATH_LOCAL', __DIR__ );
+
 require_once "admin/adminpanel.php";
 
 add_action('plugins_loaded', 'neofix_sdl_plugin_init'); 
