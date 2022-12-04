@@ -3,6 +3,13 @@
 class NeofixSdlAdminpanel{
     function __construct(){
         add_action( 'admin_menu', array( $this, 'add_admin_menu_page' ) );
+
+        // Ajax actions
+        add_action( 'wp_ajax_neofix_sdl_add', array( $this, 'add_download' ) );
+        add_action( 'wp_ajax_neofix_sdl_edit', array( $this, 'edit_download' ) );
+        add_action( 'wp_ajax_neofix_sdl_delete', array( $this, 'delete_download' ) );
+        add_action( 'wp_ajax_neofix_sdl_restore', array( $this, 'restore_download' ) );
+        add_action( 'wp_ajax_neofix_sdl_get_file_url', array( $this, 'get_media_file_url' ) );
     }
 
     function add_admin_menu_page(){

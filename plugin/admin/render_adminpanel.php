@@ -50,8 +50,7 @@ $result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FAL
                         <th>Download</th>
                     </tr>
                     </thead>
-                    <tbody>';
-
+                    <tbody>
                         <?php
                             foreach($result as $row){
                                 echo '
