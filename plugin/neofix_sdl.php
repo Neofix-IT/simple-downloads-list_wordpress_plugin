@@ -12,23 +12,12 @@
 define( 'NEOFIX_SDL_PATH', plugin_dir_url( __FILE__ ) );
 define( 'NEOFIX_SDL_PATH_LOCAL', __DIR__ );
 
-require_once "admin/adminpanel.php";
+require_once "admin/adminpanel_v2.php";
+
 
 add_action('plugins_loaded', 'neofix_sdl_plugin_init'); 
-
 function neofix_sdl_plugin_init() {
-
     load_plugin_textdomain( 'simple-downloads-list', false, dirname(plugin_basename(__FILE__)).'/languages/' );
-
-}
-
-//
-// Admin section
-//
-add_action('admin_menu','neofix_sdl_add_add_menu_page');
-function neofix_sdl_add_add_menu_page()
-{
-    add_menu_page( 'Simple Download List', 'Simple downloads list', 'manage_options', 'neofix_sdl_render_admin_panel', 'neofix_sdl_render_admin_panel');
 }
 
 // 
