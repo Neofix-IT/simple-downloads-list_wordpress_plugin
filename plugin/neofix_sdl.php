@@ -35,7 +35,7 @@ function neofix_sdl_admin_notice_show(){
     if( get_transient( 'neofix_sdl_admin_notice' ) ){
         ?>
         <div class="updated notice is-dismissible">
-            <p>Thank you for using Simple Downloads List! <strong>You are awesome</strong>.</p>
+            <p><?php echo __('Thank you for using Simple Downloads List! <strong>You are awesome</strong>.', 'simple-downloads-list')?></p>
         </div>
         <?php
         /* Delete transient, only display this notice once. */
