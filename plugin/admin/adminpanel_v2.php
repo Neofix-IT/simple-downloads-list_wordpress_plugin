@@ -60,7 +60,49 @@ class NeofixSdlAdminpanel{
         wp_die();
     }
 
+    function delete_download(){
+        // sanitize input
+        $id = intval($_POST['id']);
+        if(!$id || $id <= 0){
+            wp_send_json_error('ID is not valid');
+        }
+        else{
+            $data = array(  'deleted' => 1);
 
+            // update data
+            global $wpdb;
+            $table_name = $wpdb->prefix . "neofix_sdl";
+
+            if($wpdb->update($table_name, $data, array('id' => $id))){
+            wp_send_json_success('Data updated');
+            } else{
+            wp_send_json_error('Data not updated');
+            }
+        }
+        wp_die();
+    }
+
+    function restore_download(){
+        // sanitize input
+        $id = intval($_POST['id']);
+        if(!$id || $id <= 0){
+            wp_send_json_error('ID is not valid');
+        }
+        else{
+            $data = array(  'deleted' => 0);
+
+            // update data
+            global $wpdb;
+            $table_name = $wpdb->prefix . "neofix_sdl";
+
+            if($wpdb->update($table_name, $data, array('id' => $id))){
+            wp_send_json_success('Data updated');
+            } else{
+            wp_send_json_error('Data not updated');
+            }
+        }
+        wp_die();
+    }
 }
 
 new NeofixSdlAdminpanel();
