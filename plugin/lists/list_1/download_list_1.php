@@ -1,4 +1,6 @@
 <?php
+add_shortcode('neofix_sdl', 'neofix_sdl_render_list_1');
+
 function neofix_sdl_render_list_1($attr){
 
 	global $wpdb;
@@ -9,7 +11,7 @@ function neofix_sdl_render_list_1($attr){
 	), $attr );
 
 	
-	wp_enqueue_style( 'neofix_sdl_style_1', plugins_url( '../style/style_1.css' , __FILE__ ));
+	wp_enqueue_style( 'neofix_sdl_style_1', NEOFIX_SDL_PATH . '/lists/list_1/style.css' );
 
 	$result;
 	if($args["category"] == ""){
