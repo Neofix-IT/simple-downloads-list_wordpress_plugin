@@ -54,6 +54,7 @@ Simply add this shortcode:
 = v 1.4.0 =
 
 Refactoring code
+Minor translation expansion
 
 = v 1.3.0 =
 
