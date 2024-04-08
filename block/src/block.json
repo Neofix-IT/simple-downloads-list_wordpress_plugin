@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "neofix-sdl/neofix-sdl",
+	"version": "0.1.0",
+	"title": "Simple Downloads List",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Simple List of downloads.",
+	"attributes": {
+		"category": {
+			"type": "string"
+		}
+	},	
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "neofix-sdl",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}
