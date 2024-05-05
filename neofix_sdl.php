@@ -15,6 +15,6 @@ define( 'NEOFIX_SDL_PATH_LOCAL', __DIR__ );
 require_once "setup/setup.php";
 require_once "admin/adminpanel_v2.php";
 require_once 'lists/list_1/download_list_1.php';
-
+require_once 'block/neofix-sdl.php';
 
 ?>
