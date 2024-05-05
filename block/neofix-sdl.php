@@ -50,3 +50,17 @@ function neofix_sdl_preview_permission(){
 function neofix_sdl_editor_preview(){
 	
 }
+
+function neofix_sdl_download_categories(){
+	global $wpdb;
+	$table_name = $wpdb->prefix . "neofix_sdl";
+	$wpdb->query("INSERT INTO ".$table_name." (`id`, `name`, `description`, `category`, `download`, `deleted`) VALUES (NULL, NULL, NULL, NULL, NULL, false);");
+
+	$result = $wpdb->get_results("SELECT DISTINCT `category` FROM ".$table_name." WHERE `category` IS NOT NULL ORDER BY `category` DESC");
+	$categories = array();
+
+	foreach( $result as $category ){
+		$categories[] = $category->category;
+	}
+	return $categories;
+}
