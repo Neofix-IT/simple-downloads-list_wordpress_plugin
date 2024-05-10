@@ -14,6 +14,12 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, InspectorControls  } from '@wordpress/block-editor';
 
 
+import apiFetch from '@wordpress/api-fetch';
+import { addQueryArgs } from '@wordpress/url';
+
+import { useState, useEffect } from '@wordpress/element'
+
+
 /**
  * Imports the RawHTML from WP JSX components
  * 
@@ -24,7 +30,7 @@ import { RawHTML } from '@wordpress/element';
 /**
  * Import Selectcontrol for the sidebar block settings
  */
-import { SelectControl } from '@wordpress/components'
+import { SelectControl, PanelBody } from '@wordpress/components'
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
