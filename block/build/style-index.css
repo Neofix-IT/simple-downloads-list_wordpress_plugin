@@ -15,6 +15,9 @@
   margin-bottom: 12px;
 }
 
+#neofix_sdl * {
+  box-sizing: border-box;
+}
 #neofix_sdl table {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -23,19 +26,15 @@
   width: 100%;
   table-layout: fixed;
 }
-
 #neofix_sdl table tr {
   border: 1px solid #ddd;
   padding: 0.35em;
 }
-
-#neofix_sdl table th,
-#neofix_sdl table td {
+#neofix_sdl table th, #neofix_sdl table td {
   padding: 0.625em;
   text-align: center;
   vertical-align: top;
 }
-
 #neofix_sdl table th {
   background-color: #4472C4;
   color: white;
@@ -43,17 +42,17 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-
 #neofix_sdl .column_1 {
   font-weight: bold;
   font-size: 0.9em;
 }
-
 #neofix_sdl .column_2 {
   font-size: 0.8em;
   text-align: left;
 }
-
+#neofix_sdl .column_3 {
+  text-align: right;
+}
 #neofix_sdl .sdl_download {
   background-color: #4CAF50;
   border: none;
@@ -66,11 +65,6 @@
   font-size: 16px;
   cursor: pointer;
 }
-
-#neofix_sdl .column_3 {
-  text-align: right;
-}
-
 @media screen and (max-width: 600px) {
   #neofix_sdl table {
     border: 0;
@@ -99,10 +93,10 @@
     font-size: 0.8em;
     text-align: right;
   }
-  #neofix_sdl .column_2 {
+  #neofix_sdl table .column_2 {
     text-align: right;
   }
-  #neofix_sdl .column_2::before {
+  #neofix_sdl table .column_2::before {
     display: block;
     float: none;
     text-align: left;

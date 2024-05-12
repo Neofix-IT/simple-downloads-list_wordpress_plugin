@@ -4,8 +4,7 @@
   "name": "neofix-sdl/neofix-sdl",
   "version": "0.1.0",
   "title": "Simple Downloads List",
-  "category": "widgets",
-  "icon": "smiley",
+  "category": "media",
   "description": "Simple List of downloads.",
   "attributes": {
     "category": {
@@ -16,7 +15,7 @@
   "supports": {
     "html": false
   },
-  "textdomain": "neofix-sdl",
+  "textdomain": "simple-downloads-list",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

@@ -1,55 +1,62 @@
 === Simple Downloads List ===
 Contributors: neofix
 Donate link: https://neofix.ch
-Tags: download, list, simple, downloads, table, files, attachments
+Tags: downloads-list, simple, downloads, table, files
 Requires at least: 6.1
 Tested up to: 6.5
-Requires PHP: 7.0
+Requires PHP: 7.4
 Stable tag: 1.4.0
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
-Create a downloads list - quick and easy. With categories and mobile friendly design
+Provide a list of downloads for your visitors - quick and easy. With download categories and mobile friendly design.
 
 == Description ==
 
-Simple Downloads List allows you to provide multiple downloads as a beautiful list for your visitors. Simply add your downloads in the admin section and insert the shortcode.
+Simple Downloads List allows you to provide multiple downloads as a beautiful list for your visitors. Simply add your downloads in the admin section and start using the block or shortcode.
 
 = Main features: =
 
 * Fully free - there's no pro version
 * Mobile friendly list design
 * A search bar allows your visitors to search for downloads
-* Show only certain downloads per list by filtering them via categories
+* Filtering possible using categories
 
-= How to use =
+== How to use ==
 
-Simply add this shortcode:
+= Using WordPress block: =
 
-`[neofix_sdl]`
+Add new "Simple Downloads List" Block and (optionally) filter category within the sidepanel
 
-= Additional properties =
+= Using shortcode: =
 
-**category:** Which categories should be displayed? If this option is missing, all downloads are visible
+Simply add this shortcode
+
+`[neofix_sdl category=""]`
+
+**category:** Which categories should be displayed? If this option is missing or empty, all downloads will be visible.
 
 == Installation ==
 
-Download and install "Simple Downloads List" from Wordpress plugins. Add your downloads inside of the admin menu. Finally, add the shortcode within your page.
-
-Simply add this shortcode:
-
-`[neofix_sdl]`
-
-= Additional properties =
-
-**category:** Which categories should be displayed? If this option is missing, all downloads are visible
+Download and install "Simple Downloads List" from WordPress plugins. Add your downloads inside the admin menu. Finally, add the Simple Downloads List block or use the shortcode.
 
 == Screenshots ==
 1. Frontend desktop
 2. Frontend mobile
-3. Admin panel
+3. Adminpanel
 
 == Changelog ==
+
+= v 1.4.2 = 
+
+Minor bugfixes (Block translation not working, wrong icon)
+
+= v 1.4.1 = 
+
+Added Gutenberg Block support
+Documentation updated
+Minor styling fixes
+Compatibility updated according to new tests
 
 = v 1.4.0 =
 
@@ -63,11 +70,11 @@ Added placeholder if there are no downloads available
 
 = v 1.2.1 =
 
-Bugfix: After adding a row, the wordpress file dialog wasn't working -> Fixed.
+Bugfix: After adding a row, the WordPress file dialog wasn't working -> Fixed.
 
 = v 1.2.0 =
 
-New: Select files and content by using the wordpress file dialog.
+New: Select files and content by using the WordPress file dialog.
 New: Preventing file opening via browser after a click on download -> preferring a download instead.
 Improved description for admin panel and readme.txt
 
@@ -78,7 +85,7 @@ Small typo fixed within readme.txt
 
 = v 1.1.0 =
 
-Tested with Wordpress 6.0 and minor optimisations.
+Tested with WordPress 6.0 and minor optimizations.
 
 = v 1.0.0 =
 
