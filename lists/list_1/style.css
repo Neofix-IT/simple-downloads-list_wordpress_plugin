@@ -1,3 +1,6 @@
+#neofix_sdl *{
+  box-sizing: border-box; 
+}
 
 #neofix_sdl_search {
   width: 100%;
