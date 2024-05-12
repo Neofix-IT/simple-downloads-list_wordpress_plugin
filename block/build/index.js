@@ -317,7 +317,7 @@ module.exports = window["wp"]["url"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"neofix-sdl/neofix-sdl","version":"0.1.0","title":"Simple Downloads List","category":"media","description":"Simple List of downloads.","attributes":{"category":{"type":"string"}},"example":{},"supports":{"html":false},"textdomain":"simple-downloads-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"neofix-sdl/neofix-sdl","version":"0.1.0","title":"Simple Downloads List","category":"media","icon":"smiley","description":"Simple List of downloads.","attributes":{"category":{"type":"string"}},"example":{},"supports":{"html":false},"textdomain":"simple-downloads-list","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
 
 /***/ })
 

@@ -5,7 +5,7 @@ Tags: downloads-list, simple, downloads, table, files
 Requires at least: 6.1
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 1.4.0
+Stable tag: 1.4.2
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
