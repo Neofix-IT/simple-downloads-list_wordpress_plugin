@@ -48,29 +48,52 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit( { attributes } ) {
-	let category = {attributes.category};
-	const[downloadCategory, setDownloadCategory] = useState( { attributes.category });
-	return (
+export default function Edit( { attributes: { category } , setAttributes } ) {
+	//const { editPost } = useDispatch( 'core/editor' );
+	const [categories, setCategories] = useState([]);
+	const [blockContent, setBlockContent] = useState("<p>" + __('Loading', 'simple-downloads-list') + "...</p>");
+	useEffect( () => {
+        apiFetch( { path: `neofix-sdl/v1/download-categories/` } ).then(
+			data => { setCategories(data);}
+        );
+    }, [ ] );
 
+	useEffect( () => {
+		apiFetch( { path: addQueryArgs(`neofix-sdl/v1/editor-preview/`, { category: category } ) } ).then(
+			data => { setBlockContent(data);}
+		);
+	}, [category] ); // category is a dependency now
+
+	
+
+	var settings;
+	if (categories){
+		settings = <SelectControl
+			label={ __('Categories', 'simple-downloads-list') }
+			value={ category }
+			options={ [ {label: __('All categories', 'simple-downloads-list'), value: "" } , ...categories.map( ( cat ) => ( { label: cat, value: cat } ) ) ] }
+			onChange={ ( newCategory ) => {
+				setAttributes( { category: newCategory } );
+			} }
+		/>;
+	} else {
+		settings = <p>{ __('Loading', 'simple-downloads-list') }...</p>;
+	}
+
+	return(
 		<>
-		
-		<InspectorControls>
-			<PanelRow>
-				<fieldset>
-					<SelectControl
-						label={ __('Download category', 'neofix-sdl') }
-						valie={ category }
-					/>
-				</fieldset>
-			</PanelRow>
-		</InspectorControls>
-		<p { ...useBlockProps() }>
+			<InspectorControls>
+				<PanelBody title={ __('Settings', 'simple-downloads-list') }>
+					{settings}
+				</PanelBody>
+			</InspectorControls>
+			
+
+			<div { ...useBlockProps() }>
 			<RawHTML>
-				{ '<strong>Hallo</strong>' }
+				{ blockContent }
 			</RawHTML>
-			{ __( 'Neofix Sdl – hello from the editor!', 'neofix-sdl' ) }
-		</p>
+			</div>
 		</>
 	);
 }
