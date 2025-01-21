@@ -23,9 +23,9 @@ class NeofixSdlAdminpanel{
     function add_download(){
         global $wpdb;
         $table_name = $wpdb->prefix . "neofix_sdl";
-        $wpdb->query("INSERT INTO ".$table_name." (`id`, `name`, `description`, `category`, `download`, `deleted`) VALUES (NULL, NULL, NULL, NULL, NULL, false);");
+        $wpdb->query( "INSERT INTO `$table_name` (`id`, `name`, `description`, `category`, `download`, `deleted`) VALUES (NULL, NULL, NULL, NULL, NULL, false);" );
 
-        $result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FALSE ORDER BY id DESC");
+        $result = $wpdb->get_results("SELECT * FROM `$table_name` WHERE deleted IS FALSE ORDER BY id DESC");
         
         foreach($result as $row){
             echo '
@@ -58,7 +58,7 @@ class NeofixSdlAdminpanel{
             global $wpdb;
             $table_name = $wpdb->prefix . "neofix_sdl";
 
-            if($wpdb->update($table_name, $data, array('id' => $id))){
+            if( $wpdb->update( $table_name, $data, array( 'id' => $id ) ) ){
             wp_send_json_success('Data updated');
             } else{
             wp_send_json_error('Data not updated');

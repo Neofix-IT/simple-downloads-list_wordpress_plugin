@@ -37,7 +37,7 @@ class NeofixSdlSetup{
         $table_name = $wpdb->prefix . 'neofix_sdl';
         $charset_collate = $wpdb->get_charset_collate();
         
-        $sql = "CREATE TABLE ".$table_name." (
+        $sql = "CREATE TABLE `$table_name` (
             `id` int(11) NOT NULL AUTO_INCREMENT,
             `name` varchar(250) DEFAULT NULL,
             `description` text DEFAULT NULL,
@@ -55,7 +55,7 @@ class NeofixSdlSetup{
         global $wpdb;
         $table_name = $wpdb->prefix . 'neofix_sdl';
         
-        $wpdb->query("DROP TABLE IF EXISTS $table_name");
+        $wpdb->query("DROP TABLE IF EXISTS `$table_name`");
     }
 }
 

@@ -20,7 +20,7 @@ wp_localize_script( 'neofix_sdl_admin', 'plugin_ajax_object', array( 'ajax_url' 
 global $wpdb;
 $table_name = $wpdb->prefix . "neofix_sdl";
 
-$result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FALSE ORDER BY id DESC");
+$result = $wpdb->get_results("SELECT * FROM `$table_name` WHERE deleted IS FALSE ORDER BY id DESC");
 
 ?>
 <body>
