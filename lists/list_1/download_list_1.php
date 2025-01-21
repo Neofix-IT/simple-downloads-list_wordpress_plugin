@@ -13,14 +13,15 @@ function neofix_sdl_render_list_1($attr){
 	
 	wp_enqueue_style( 'neofix_sdl_style_1', NEOFIX_SDL_PATH . '/lists/list_1/style.css' );
 
-	$result;
-	if($args["category"] == ""){
-		$result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FALSE ORDER BY id DESC");
+	$category = esc_sql( $args["category"] );
+
+	if($category == ""){
+		$query = "SELECT * FROM `$table_name` WHERE deleted IS false  ORDER BY id DESC";
 	} else {
-		$result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FALSE 
-		AND category = '".$args["category"]."' ORDER BY id DESC");
+		$query = $wpdb->prepare("SELECT * FROM `$table_name` WHERE deleted IS false AND category=%s ORDER BY id DESC", $category);
 	}
-	
+	$result = $wpdb->get_results($query);
+ 
 	$data = '
 		<div id="neofix_sdl">
 		<input type="text" id="neofix_sdl_search" onkeyup="myFunction()" placeholder="'.__('Search...', 'simple-downloads-list').'">

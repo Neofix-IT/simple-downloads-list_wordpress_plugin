@@ -1,17 +1,16 @@
 <?php
-    global $wpdb;
-    $table_name = $wpdb->prefix . 'neofix_sdl';
+   global $wpdb;
+   $table_name = $wpdb->prefix . 'neofix_sdl';
 
-    $category = esc_sql($category);
 
-    $result;
-    if($category == ""){
-        $result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FALSE ORDER BY id DESC");
-    } else {
-        $result = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE deleted IS FALSE 
-        AND category = '".$category."' ORDER BY id DESC");
-    }
+   $query
+   if($category == ""){
+       $query = "SELECT * FROM `$table_name` WHERE deleted IS false  ORDER BY id DESC"
+   } else {
+       $query = ("SELECT * FROM `$table_name` WHERE deleted IS false AND category=%s ORDER BY id DESC", $category);
+   }
 
+   $result = $wpdb->get_results($query);
 ?>
 
 <div id="neofix_sdl" <?php echo get_block_wrapper_attributes(); ?>>
