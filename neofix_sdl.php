@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Simple Downloads List
  * Plugin URI: http://neofix.ch/
@@ -9,11 +10,14 @@
  * Text Domain: simple-downloads-list
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
-    
-define( 'NEOFIX_SDL_PATH', plugin_dir_url( __FILE__ ) );
-define( 'NEOFIX_SDL_PATH_LOCAL', __DIR__ );
 
+define('NEOFIX_SDL_PATH', plugin_dir_url(__FILE__));
+define('NEOFIX_SDL_PATH_LOCAL', __DIR__);
+
+require_once NEOFIX_SDL_PATH_LOCAL . "/setup/setup.php";
+require_once NEOFIX_SDL_PATH_LOCAL . "/admin/adminpanel_v3.php";
+require_once NEOFIX_SDL_PATH_LOCAL . "/lists/list_1/download_list_1.php";
 require_once NEOFIX_SDL_PATH_LOCAL . "/blocks/sdl/download_block.php";
