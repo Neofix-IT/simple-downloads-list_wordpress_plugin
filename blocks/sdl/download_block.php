@@ -84,7 +84,7 @@ class SDL_Download_Block
         $category = esc_sql($data->get_param('category')) ?? "";
 
         ob_start();
-        include __DIR__ . '/list_1.php';
+        include NEOFIX_SDL_PATH_LOCAL . '/templates/download_lists/list_1.php';
         return ob_get_clean();
     }
 }
