@@ -10,7 +10,8 @@ if (!function_exists('neofix_sdl_get_downloads')) {
         $category = $attr['category'] ?? "";
 
         ob_start();
-        include 'list_1.php';
+        $block_wrapper_attributes = get_block_wrapper_attributes();
+        include NEOFIX_SDL_PATH_LOCAL . '/templates/download_lists/list_1.php';
         echo ob_get_clean();
     }
 }

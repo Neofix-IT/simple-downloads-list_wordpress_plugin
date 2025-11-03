@@ -65,7 +65,7 @@ class SDL_Download_Block
         global $wpdb;
         $table_name = $wpdb->prefix . "neofix_sdl";
 
-        $result = $wpdb->get_results("SELECT DISTINCT `category` FROM `$table_name` WHERE `category` IS NOT NULL AND `category` <> '' ORDER BY `category` DESC");
+        $result = $wpdb->get_results("SELECT DISTINCT `category` FROM `$table_name` WHERE `category` IS NOT NULL AND `category` <> '' AND `deleted` IS false ORDER BY `category` DESC");
         $categories = array();
 
         foreach ($result as $category) {
