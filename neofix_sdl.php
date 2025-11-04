@@ -18,6 +18,6 @@ define('NEOFIX_SDL_PATH', plugin_dir_url(__FILE__));
 define('NEOFIX_SDL_PATH_LOCAL', __DIR__);
 
 require_once NEOFIX_SDL_PATH_LOCAL . "/setup/setup.php";
-require_once NEOFIX_SDL_PATH_LOCAL . "/admin/adminpanel_v3.php";
+require_once NEOFIX_SDL_PATH_LOCAL . "/admin/neofix_sdl_adminpanel.php";
 require_once NEOFIX_SDL_PATH_LOCAL . "/lists/list_1/download_list_1.php";
 require_once NEOFIX_SDL_PATH_LOCAL . "/blocks/sdl/download_block.php";
