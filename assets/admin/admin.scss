@@ -1,0 +1,44 @@
+@use "./table-editor";
+@use "./loader";
+
+/* Target your custom panel wrapper */
+.full-width-admin-panel {
+  margin: 20px;
+  padding: 20px;
+  max-width: none;
+  overflow: auto;
+  height: calc(100vh - 130px);
+  background-color: white;
+}
+
+/* Expand content area */
+#wpcontent {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#wpbody-content {
+  padding: 0;
+  margin: 0;
+}
+
+/* DO NOT hide sidebar */
+#adminmenuwrap,
+#adminmenuback {
+  display: block !important;
+}
+
+/* Optional: remove max-width constraint */
+.wrap {
+  max-width: none;
+}
+
+/* Style your content box */
+.admin-panel-content {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccd0d4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
