@@ -3,9 +3,9 @@ Contributors: neofix
 Donate link: https://neofix.ch
 Tags: downloads-list, simple, downloads, table, files
 Requires at least: 6.1
-Tested up to: 6.7
-Requires PHP: 8.0
-Stable tag: 1.4.3
+Tested up to: 6.8
+Requires PHP: 8.2
+Stable tag: 1.5.0
 License: MIT
 License URI: https://github.com/Neofix-IT/simple-downloads-list_wordpress_plugin/blob/main/LICENSE
 
@@ -46,6 +46,14 @@ Download and install "Simple Downloads List" from WordPress plugins. Add your do
 3. Adminpanel
 
 == Changelog ==
+
+= v 1.5.0 = 
+
+Plugin structure overhaul, separate assets & code, combine shared templates
+Major adminpanel rework, replaced bootstrap and updated fontawesome to v7.1.0
+Migrated from AJAX to REST API
+Fixed security vulnerabilities, allowing logged-in users to modify downloads
+Minor improvements & bug fixes
 
 = v 1.4.3 = 
 
